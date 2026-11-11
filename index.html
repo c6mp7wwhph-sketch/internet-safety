@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Информационная памятка о преступности в информационном пространстве: виды интернет-угроз, правила безопасности, защита личных данных и порядок действий.">
+<title>Безопасность в интернете | Защити себя в цифровом мире</title>
+<style>
+:root{
+ --ink:#17243b;--muted:#64748b;--paper:#f5f7fb;--white:#fff;--blue:#2855d9;
+ --blue2:#4778f5;--mint:#dff7ef;--mint-ink:#11634e;--yellow:#fff2c7;
+ --yellow-ink:#805b00;--red:#ffe4e5;--red-ink:#a52b35;--line:#e4eaf2;
+ --shadow:0 18px 50px rgba(24,42,76,.09);--radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65}
+a{color:inherit}button{font:inherit}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(228,234,242,.9)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:850;letter-spacing:-.03em}
+.logo{width:40px;height:40px;border-radius:14px;background:linear-gradient(135deg,var(--blue),#6d8fff);display:grid;place-items:center;color:white;font-size:21px;box-shadow:0 8px 20px #2855d933}
+.navlinks{display:flex;align-items:center;gap:20px}
+.navlinks a{text-decoration:none;color:#506079;font-size:13px;font-weight:700}
+.navlinks a:hover{color:var(--blue)}
+.menu{display:none;border:1px solid var(--line);background:white;border-radius:12px;padding:8px 12px;color:var(--ink)}
+.hero{padding:74px 0 58px;background:radial-gradient(circle at 82% 16%,#dfe8ff 0,transparent 28%),linear-gradient(135deg,#f7f9ff 0%,#edf3ff 52%,#effaf7 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border-radius:99px;background:#e4ebff;color:#2449bd;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+h1{font-size:clamp(38px,5.5vw,66px);line-height:1.04;letter-spacing:-.055em;margin:20px 0 18px;max-width:720px}
+.gradient{background:linear-gradient(90deg,#2855d9,#19a783);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;color:#53627a;max-width:650px;margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:14px;text-decoration:none;font-weight:750;border:1px solid transparent;transition:.2s;cursor:pointer}
+.btn.primary{background:var(--blue);color:white;box-shadow:0 10px 22px #2855d933}
+.btn.primary:hover{transform:translateY(-2px);background:#1f45bd}
+.btn.secondary{background:white;border-color:var(--line);color:var(--ink)}
+.btn.secondary:hover{border-color:#b8c8f8}
+.hero-card{background:white;border:1px solid #e7ecf5;border-radius:28px;padding:25px;box-shadow:var(--shadow);position:relative}
+.hero-card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:#e5f8f1;right:-24px;top:-28px;z-index:0}
+.hero-card>*{position:relative}
+.card-label{font-size:12px;color:var(--muted);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.big-stat{font-size:38px;font-weight:900;letter-spacing:-.05em;margin:8px 0 0}
+.hero-card p{color:var(--muted);margin:4px 0 20px}
+.mini-list{display:grid;gap:11px}
+.mini{display:flex;gap:11px;align-items:center;padding:11px 12px;background:#f7f9fc;border-radius:14px;font-size:14px;font-weight:650}
+.dot{width:29px;height:29px;display:grid;place-items:center;border-radius:10px;background:var(--mint);color:var(--mint-ink);flex:none}
+section{padding:70px 0}
+.section-head{max-width:760px;margin-bottom:30px}
+.kicker{font-size:12px;color:var(--blue);font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.04em;line-height:1.15;margin:9px 0 12px}
+.section-head p{color:var(--muted);margin:0;font-size:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:23px;box-shadow:0 7px 24px rgba(24,42,76,.035)}
+.iconbox{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:#edf2ff;font-size:21px;margin-bottom:15px}
+.card h3{font-size:18px;line-height:1.3;margin:0 0 8px;letter-spacing:-.02em}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.callout{padding:19px 21px;border-radius:17px;background:#eef3ff;border:1px solid #dce6ff;color:#344a80;margin-top:22px}
+.callout strong{color:#1d3eaa}
+.warning{background:var(--yellow);border:1px solid #f5e4a9;color:var(--yellow-ink);padding:18px 20px;border-radius:17px}
+.protect{background:#fff}
+.rights-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.right-item{display:flex;gap:14px;padding:18px;background:#f8fafc;border:1px solid var(--line);border-radius:17px}
+.check{flex:none;width:30px;height:30px;border-radius:10px;background:var(--mint);color:var(--mint-ink);display:grid;place-items:center;font-weight:900}
+.right-item b{display:block;margin-bottom:3px}
+.right-item span{font-size:14px;color:var(--muted)}
+.risks{background:#fff9f9}
+.risk-card{border-top:4px solid #e47b82}
+.risk-card .iconbox{background:var(--red)}
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.step{counter-increment:step;display:flex;gap:15px;background:white;border:1px solid var(--line);padding:18px;border-radius:17px}
+.step:before{content:counter(step,decimal-leading-zero);font-weight:900;color:var(--blue);font-size:17px;background:#edf2ff;border-radius:12px;padding:7px 9px;height:max-content}
+.step b{display:block;margin-bottom:4px}
+.step p{margin:0;color:var(--muted);font-size:14px}
+.dont{background:#fff;border:1px solid #f3d7d9;border-radius:20px;padding:22px}
+.dont h3{margin:0 0 12px;color:var(--red-ink)}
+.dont ul{margin:0;padding-left:20px;color:#67434a}
+.dont li{margin:7px 0}
+.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.contact{background:#fff;border:1px solid var(--line);padding:20px;border-radius:18px}
+.contact a{color:var(--blue);font-weight:750;text-decoration:none;overflow-wrap:anywhere}
+.contact p{font-size:14px;color:var(--muted);margin:7px 0 0}
+.faq details{background:white;border:1px solid var(--line);border-radius:15px;padding:16px 18px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:750}
+.faq details p{color:var(--muted);font-size:14px;margin:12px 0 0}
+footer{background:#15233d;color:#dce5f7;padding:34px 0}
+footer p{margin:5px 0;color:#aebbd2;font-size:13px}
+.foot{display:flex;justify-content:space-between;gap:25px;align-items:center}
+.top{position:fixed;bottom:20px;right:20px;width:45px;height:45px;border:0;border-radius:15px;background:var(--blue);color:white;font-size:20px;box-shadow:0 8px 20px #2855d944;cursor:pointer;display:none}
+.small{font-size:12px;color:var(--muted)}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.hero-card{max-width:520px}.grid3{grid-template-columns:1fr 1fr}.contacts{grid-template-columns:1fr 1fr}.navlinks{gap:10px}.navlinks a{font-size:11px}}
+@media(max-width:620px){.wrap{width:min(100% - 28px,1120px)}.nav{height:64px}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;background:white;padding:15px 22px 20px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.navlinks a{font-size:15px}.menu{display:block}.hero{padding:48px 0 42px}.lead{font-size:16px}.grid3,.grid2,.rights-grid,.steps,.contacts{grid-template-columns:1fr}section{padding:52px 0}.foot{display:block}.foot div+div{margin-top:16px}}
+@media print{header,.actions,.top{display:none!important}body{background:white}.hero{padding:25px 0}.card,.step,.contact{break-inside:avoid;box-shadow:none}section{padding:25px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="logo">⌁</span><span>ЦИФРОВАЯ БЕЗОПАСНОСТЬ</span></a>
+<nav class="navlinks" id="navlinks">
+<a href="#about">О проблеме</a><a href="#types">Виды угроз</a><a href="#protect">Защита данных</a><a href="#memo">Памятка</a><a href="#help">Помощь</a>
+</nav><button class="menu" id="menuBtn" aria-label="Открыть меню">☰ Меню</button>
+</div></header>
+<main id="home">
+<section class="hero"><div class="wrap hero-grid"><div>
+<span class="eyebrow">Информационная грамотность • Безопасность в сети</span>
+<h1>Твой цифровой мир должен быть <span class="gradient">безопасным</span></h1>
+<p class="lead">Узнай, какие преступления встречаются в интернете, как защитить личные данные и что делать, если ты столкнулся с цифровой угрозой.</p>
+<div class="actions"><a class="btn primary" href="#memo">Открыть памятку <span>→</span></a><a class="btn secondary" href="#types">Изучить виды угроз</a></div>
+</div><aside class="hero-card"><div class="card-label">Главное правило</div><div class="big-stat">Остановись и проверь</div>
+<p>Не торопись переходить по ссылкам, отправлять данные или переводить деньги по просьбе незнакомцев.</p>
+<div class="mini-list">
+<div class="mini"><span class="dot">✓</span> Используй надёжные пароли</div>
+<div class="mini"><span class="dot">✓</span> Проверяй отправителей и сайты</div>
+<div class="mini"><span class="dot">✓</span> Не сообщай коды подтверждения</div>
+</div></aside></div></section>
+
+<section id="about"><div class="wrap">
+<div class="section-head"><div class="kicker">01 / Разберёмся</div><h2>Что такое преступность в информационном пространстве?</h2>
+<p>Это противоправные действия, совершаемые с использованием компьютеров, сетей связи и интернета либо направленные против информации и цифровых систем.</p></div>
+<div class="grid3">
+<article class="card"><div class="iconbox">🌐</div><h3>Цифровая среда</h3><p>Преступления могут происходить через социальные сети, мессенджеры, сайты, электронную почту и онлайн-сервисы.</p></article>
+<article class="card"><div class="iconbox">🎭</div><h3>Обман и манипуляции</h3><p>Злоумышленники могут выдавать себя за знакомых, сотрудников организаций или представителей служб поддержки.</p></article>
+<article class="card"><div class="iconbox">🔐</div><h3>Посягательство на данные</h3><p>Целью может быть получение доступа к аккаунтам, личной информации, переписке или цифровым ресурсам.</p></article>
+</div>
+<div class="callout"><strong>Важно:</strong> интернет-преступления не всегда заметны сразу. Поэтому важно внимательно относиться к сообщениям, ссылкам, вложениям и запросам личной информации.</div>
+</div></section>
+
+<section id="types" class="risks"><div class="wrap">
+<div class="section-head"><div class="kicker">02 / Основные виды</div><h2>С какими угрозами можно столкнуться?</h2><p>Ниже приведены распространённые виды преступлений и опасных ситуаций в информационном пространстве.</p></div>
+<div class="grid3">
+<article class="card risk-card"><div class="iconbox">💳</div><h3>Интернет-мошенничество</h3><p>Обман пользователей с целью получить деньги, банковские данные или доступ к аккаунтам.</p></article>
+<article class="card risk-card"><div class="iconbox">🎣</div><h3>Фишинг</h3><p>Поддельные письма, сообщения и сайты, которые имитируют настоящие сервисы и пытаются получить конфиденциальные данные.</p></article>
+<article class="card risk-card"><div class="iconbox">👤</div><h3>Кража личных данных</h3><p>Незаконное получение и использование персональной информации: номера телефона, адреса, фотографий и других сведений.</p></article>
+<article class="card risk-card"><div class="iconbox">🔓</div><h3>Взлом аккаунтов</h3><p>Получение посторонними доступа к странице, почте или другому личному кабинету без разрешения владельца.</p></article>
+<article class="card risk-card"><div class="iconbox">📢</div><h3>Кибербуллинг и угрозы</h3><p>Преследование, унижение, запугивание или распространение личной информации с помощью цифровых средств.</p></article>
+<article class="card risk-card"><div class="iconbox">🦠</div><h3>Вредоносные программы</h3><p>Программы, которые могут нарушать работу устройства, повреждать файлы или получать доступ к информации.</p></article>
+</div>
+</div></section>
+
+<section id="protect" class="protect"><div class="wrap">
+<div class="section-head"><div class="kicker">03 / Защити себя</div><h2>Правила защиты личных данных</h2><p>Простые привычки помогают снизить риск потери доступа к аккаунтам и нежелательного распространения личной информации.</p></div>
+<div class="rights-grid">
+<div class="right-item"><span class="check">✓</span><div><b>Создавай надёжные пароли</b><span>Используй длинные уникальные пароли для разных сервисов. Не сообщай их другим людям.</span></div></div>
+<div class="right-item"><span class="check">✓</span><div><b>Включай двухфакторную защиту</b><span>Дополнительное подтверждение входа помогает защитить аккаунт, даже если пароль стал известен посторонним.</span></div></div>
+<div class="right-item"><span class="check">✓</span><div><b>Ограничивай публикацию личного</b><span>Не размещай в открытом доступе адрес, документы, расписание, номера телефонов и другие чувствительные сведения.</span></div></div>
+<div class="right-item"><span class="check">✓</span><div><b>Проверяй ссылки и сайты</b><span>Смотри на адрес сайта, проверяй отправителя и не открывай подозрительные вложения.</span></div></div>
+<div class="right-item"><span class="check">✓</span><div><b>Обновляй устройства и приложения</b><span>Устанавливай обновления из официальных источников и используй встроенные средства защиты.</span></div></div>
+<div class="right-item"><span class="check">✓</span><div><b>Проверяй настройки приватности</b><span>Настрой, кто может видеть публикации, отправлять сообщения и находить твой профиль.</span></div></div>
+</div>
+<div class="warning" style="margin-top:20px"><strong>Запомни:</strong> никому не сообщай одноразовые коды из СМС и приложений, PIN-коды, пароли и данные банковской карты. Настоящие сотрудники организаций не должны просить назвать код подтверждения.</div>
+</div></section>
+
+<section id="memo"><div class="wrap">
+<div class="section-head"><div class="kicker">04 / Практическая памятка</div><h2>Как действовать при подозрительной ситуации</h2><p>Если сообщение, звонок или сайт вызывают сомнения, не торопись выполнять инструкции неизвестного человека.</p></div>
+<div class="steps">
+<div class="step"><div><b>Остановись и не отвечай сразу</b><p>Не переходи по ссылкам, не скачивай файлы и не отправляй деньги или личные данные под давлением.</p></div></div>
+<div class="step"><div><b>Проверь информацию</b><p>Свяжись с организацией или знакомым через официальный сайт или уже известный номер, а не через контакты из подозрительного сообщения.</p></div></div>
+<div class="step"><div><b>Сохрани подтверждения</b><p>Сохрани переписку, адрес страницы, дату и время сообщения. Не распространяй подозрительные ссылки дальше.</p></div></div>
+<div class="step"><div><b>Защити свои аккаунты</b><p>Если есть риск доступа посторонних, смени пароль с безопасного устройства, заверши неизвестные сеансы и включи двухфакторную защиту.</p></div></div>
+<div class="step"><div><b>Обратись за помощью</b><p>Расскажи родителям или другому взрослому, которому доверяешь. При необходимости обратись в банк, службу поддержки сервиса или правоохранительные органы.</p></div></div>
+<div class="step"><div><b>Проверь устройство</b><p>Если открывал подозрительный файл, запусти проверку встроенным или надёжным защитным средством и установи обновления.</p></div></div>
+</div>
+<div class="grid2" style="margin-top:20px">
+<div class="dont"><h3>🚩 Признаки возможного мошенничества</h3><ul>
+<li>Тебя торопят и требуют немедленно принять решение.</li>
+<li>Просят назвать пароль или код подтверждения.</li>
+<li>Обещают лёгкий выигрыш или гарантированный доход.</li>
+<li>Присылают неизвестную ссылку для входа в аккаунт.</li>
+<li>Просят перевести деньги на незнакомый счёт.</li>
+<li>Угрожают публикацией личной информации.</li>
+</ul></div>
+<div class="card" style="background:#f0fbf7;border-color:#d8f0e6"><h3 style="color:#11634e">Если ты уже передал данные</h3><p style="margin-bottom:10px">Не скрывай ситуацию и не пытайся решать её в одиночку. Сообщи взрослому, которому доверяешь. С безопасного устройства измени пароль, заверши посторонние сеансы и обратись в поддержку сервиса. Если затронуты банковские данные или деньги — сразу свяжись с банком по официальному номеру.</p><p class="small">Если тебе угрожают или шантажируют, сохрани сообщения и обратись за помощью к взрослому и в правоохранительные органы.</p></div>
+</div>
+<div class="actions" style="margin-top:22px"><button class="btn primary" onclick="window.print()">Распечатать памятку ↗</button><a class="btn secondary" href="#help">Куда обратиться за помощью</a></div>
+</div></section>
+
+<section id="help" class="protect"><div class="wrap">
+<div class="section-head"><div class="kicker">05 / Полезные ресурсы</div><h2>Куда обратиться за помощью?</h2><p>Если столкнулся с интернет-мошенничеством, угрозами или незаконным использованием данных, не оставайся с проблемой один на один.</p></div>
+<div class="contacts">
+<div class="contact"><div class="iconbox">👨‍👩‍👧</div><h3>Родители или доверенный взрослый</h3><p>Расскажи о ситуации человеку, который сможет помочь спокойно оценить риски и поддержать тебя.</p></div>
+<div class="contact"><div class="iconbox">🏦</div><h3>Банк</h3><p>Если затронуты банковская карта, перевод или доступ к банковскому приложению, немедленно свяжись с банком по официальному номеру.</p></div>
+<div class="contact"><div class="iconbox">🛡️</div><h3>Полиция</h3><p>При факте мошенничества, угрозах или незаконном доступе к данным можно обратиться в полицию.</p><a href="https://мвд.рф/" target="_blank" rel="noopener">Официальный сайт МВД ↗</a></div>
+<div class="contact"><div class="iconbox">⚖️</div><h3>Портал Госуслуг</h3><p>Официальный портал государственных услуг и справочной информации.</p><a href="https://www.gosuslugi.ru/" target="_blank" rel="noopener">Госуслуги ↗</a></div>
+<div class="contact"><div class="iconbox">📘</div><h3>Роскомнадзор</h3><p>Информация о защите персональных данных и деятельности ведомства.</p><a href="https://rkn.gov.ru/" target="_blank" rel="noopener">Официальный сайт ↗</a></div>
+<div class="contact"><div class="iconbox">🚨</div><h3>Экстренная помощь</h3><p>Если существует непосредственная угроза жизни или безопасности, обратись к взрослому и позвони по номеру 112.</p></div>
+</div>
+<div class="callout"><strong>Главное:</strong> своевременное обращение за помощью повышает шансы остановить дальнейший ущерб. Не плати тем, кто обещает «вернуть деньги» за отдельную предоплату, и не сообщай им коды и пароли.</div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<div class="section-head"><div class="kicker">06 / Коротко о важном</div><h2>Частые вопросы</h2></div>
+<div class="faq">
+<details><summary>Можно ли переходить по ссылкам из сообщений?</summary><p>Только если ты уверен в отправителе и адресе сайта. Даже сообщение от знакомого аккаунта может оказаться отправленным злоумышленником, если аккаунт взломан.</p></details>
+<details><summary>Что делать, если взломали социальную сеть?</summary><p>Попробуй восстановить доступ через официальный сервис, смени пароль, заверши неизвестные сеансы и предупреди друзей, если от твоего имени рассылают подозрительные сообщения.</p></details>
+<details><summary>Почему нельзя сообщать код из СМС?</summary><p>Код может подтверждать вход, перевод или изменение настроек. Передав его другому человеку, можно предоставить ему доступ к аккаунту или операции.</p></details>
+<details><summary>Нужно ли удалять переписку с мошенником?</summary><p>Не спеши удалять её: сообщения и другие сведения могут пригодиться при обращении в банк, службу поддержки или полицию. Не вступай в дальнейший разговор.</p></details>
+</div></div></section>
+</main>
+<footer><div class="wrap foot">
+<div><strong>ЦИФРОВАЯ БЕЗОПАСНОСТЬ</strong><p>Информационный проект о преступности в информационном пространстве и способах защиты от цифровых угроз.</p></div>
+<div><p>Материал носит информационный характер и предназначен для повышения цифровой грамотности.</p><p>Проверяй актуальность официальных рекомендаций и обращайся за помощью при необходимости.</p></div>
+</div></footer>
+<button class="top" id="topBtn" aria-label="Наверх">↑</button>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const topBtn=document.getElementById('topBtn');
+window.addEventListener('scroll',()=>{topBtn.style.display=window.scrollY>500?'block':'none'});
+topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body></html>
